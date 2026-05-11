@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to Defold
 
 This project was created from the "mobile" project template. This means that the settings in ["game.project"](defold://open?path=/game.project) have been changed to be suitable for a mobile game:
@@ -19,3 +20,7 @@ If you run into trouble, help is available in [our forum](https://forum.defold.c
 Happy Defolding!
 
 ---
+=======
+# Chaslen2101.github.io
+Defold arrow game
+>>>>>>> 0b6eaaf203a142ce6e96967d5272d6efbb48c4b8
