@@ -27,6 +27,11 @@
 *.texture_profiles linguist-language=JSON5
 *.tilemap linguist-language=JSON5
 *.tilesource linguist-language=JSON5
+*.wasm binary
+*.data binary
+*.c binary
+*.projectc binary
+*.bundle binary
 
 # Defold JSON Files
 *.buffer linguist-language=JSON
