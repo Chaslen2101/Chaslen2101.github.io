@@ -1,0 +1,25 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	self.win_box = gui.get_node("win_box")
+	self.win_text = gui.get_node("win_text")
+	self.win_button_box = gui.get_node("win_button_box")
+	self.win_button_text = gui.get_node("win_button_text")
+end
+
+function on_message(self, message_id, message)
+
+	if message_id == hash("show_win") then
+		gui.set_visible(self.win_box, true)
+		gui.set_visible(self.win_text, true)
+		gui.set_visible(self.win_button_box, true)
+		gui.set_visible(self.win_button_text, true)
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		if gui.pick_node(self.win_button_box, action.x, action.y) then
+			msg.post("main:/go#main", "next_level")
+		end
+	end
+end

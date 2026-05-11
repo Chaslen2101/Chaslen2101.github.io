@@ -1,0 +1,42 @@
+local levels = require("main.levels")
+function init(self)
+	msg.post("#main_menu_collection", "load")
+end
+
+function on_message(self, message_id, message, sender)
+
+	if message_id == hash("proxy_loaded") then
+		msg.post(sender, "init")
+		msg.post(sender, "enable")
+		msg.post(sender, "acquire_input_focus")
+	end
+
+	if message_id == hash("proxy_unloaded") then
+		if self.waiting then
+			self.waiting = false
+			msg.post("#level_collection", "load")
+		end
+	end
+	
+	if message_id == hash("set_level") then
+		msg.post(sender, "disable")
+		msg.post(sender, "final")
+		msg.post(sender, "unload")
+		msg.post("#level_collection", "load")
+	end
+
+	if message_id == hash("retry") then
+		msg.post("#level_collection", "disable")
+		msg.post("#level_collection", "final")
+		msg.post("#level_collection", "unload")
+		self.waiting = true
+	end
+
+	if message_id == hash("next_level") then
+		msg.post("#level_collection", "disable")
+		msg.post("#level_collection", "final")
+		msg.post("#level_collection", "unload")
+		levels.data.current_level = levels.data.current_level + 1
+		self.waiting = true
+	end
+end

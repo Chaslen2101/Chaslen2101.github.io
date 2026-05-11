@@ -1,0 +1,33 @@
+local levels = require("main.levels")
+
+local function delete_one_live(self)
+	self.lives_number = self.lives_number - 1
+	if self.lives_number > 0 then
+		gui.set_text(
+		self.lives_number_node,
+		self.lives_number
+		)
+	else collectionfactory.create("#lose_collection")
+	end
+end
+
+function init(self)
+	self.lives_number_node = gui.get_node("lives_number_text")
+	
+	local current_level = levels.data.current_level
+	local level = levels.levels[current_level]
+	self.lives_number = level.lives
+	
+	gui.set_text(self.lives_number_node, self.lives_number)
+end
+
+function on_message(self, message_id, message)
+
+	if message_id == hash("delete_one_live") then
+		delete_one_live(self)
+	end
+	
+	if message_id == hash("show_win") then
+		gui.set_visible(self.win_node, true)
+	end
+end

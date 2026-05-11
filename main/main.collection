@@ -1,0 +1,22 @@
+name: "main"
+scale_along_z: 0
+embedded_instances {
+  id: "go"
+  data: "components {\n"
+  "  id: \"main\"\n"
+  "  component: \"/main/main.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"main_menu_collection\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/main/main_menu/main_menu.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"level_collection\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/main/level/level.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

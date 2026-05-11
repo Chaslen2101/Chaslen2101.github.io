@@ -1,0 +1,90 @@
+script: "/main/level/gui/lose_gui/lose.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 317.0
+    y: 545.0
+  }
+  scale {
+    x: 1.597999
+    y: 1.843977
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.4
+    z: 0.8
+  }
+  type: TYPE_BOX
+  id: "lose_box"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 1.077876
+    y: 12.561741
+  }
+  scale {
+    x: 1.106907
+    y: 1.102978
+    z: 0.96
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "You Lose!"
+  font: "default"
+  id: "lose_text"
+  parent: "lose_box"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 320.0
+    y: 490.0
+  }
+  scale {
+    x: 0.671764
+    y: 0.347546
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    y: 0.5019608
+    z: 0.5019608
+  }
+  type: TYPE_BOX
+  id: "lose_button_box"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 1.286689
+    y: 2.540273
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Restart\n"
+  ""
+  font: "default"
+  id: "lose_button_text"
+  parent: "lose_button_box"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

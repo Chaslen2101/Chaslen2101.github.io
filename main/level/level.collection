@@ -1,0 +1,20 @@
+name: "level"
+instances {
+  id: "level"
+  prototype: "/main/level/background.go"
+}
+scale_along_z: 0
+embedded_instances {
+  id: "level_gui"
+  data: "components {\n"
+  "  id: \"main\"\n"
+  "  component: \"/main/level/gui/level.gui\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"lose_collection\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/main/level/gui/lose_gui/lose.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

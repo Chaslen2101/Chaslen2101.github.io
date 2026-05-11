@@ -1,0 +1,10 @@
+name: "lose"
+scale_along_z: 0
+embedded_instances {
+  id: "lose_gui"
+  data: "components {\n"
+  "  id: \"lose\"\n"
+  "  component: \"/main/level/gui/lose_gui/lose.gui\"\n"
+  "}\n"
+  ""
+}

@@ -1,0 +1,57 @@
+script: "/main/level/gui/level.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+nodes {
+  position {
+    x: 529.0
+    y: 1085.0
+  }
+  scale {
+    x: 2.62
+    y: 2.62
+    z: 2.62
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Lives: "
+  font: "default"
+  id: "lives_text"
+  layer: "main_layer"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 28.244276
+    y: -0.763359
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  font: "default"
+  id: "lives_number_text"
+  parent: "lives_text"
+  inherit_alpha: true
+}
+layers {
+  name: "main_layer"
+}
+layers {
+  name: "win_layer"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT
